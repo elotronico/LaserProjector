@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 // See LICENSE file for details
 // Copyright 2016 Florian Link (at) gmx.de
 
