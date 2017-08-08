@@ -4,7 +4,7 @@
 #define LASER_H
 
 #include "Arduino.h"
-
+#include "Basics.h"
 
 // -- The following flags can be used to fine tune the laser timing
 
@@ -53,11 +53,11 @@ public:
 
   void on();
   void off();
-
+  
   void setScale(float scale);
   void setOffset(long offsetX, long offsetY);
-
-  void resetClipArea();
+  
+  void resetClipArea(); 
   void setClipArea(long x, long y, long x1, long y1);
 
   void resetMaxMove() { _maxMove = -1; _laserForceOff = false; }
@@ -66,6 +66,7 @@ public:
   void getMaxMoveFinalPosition(long &x, long &y) { x = _maxMoveX; y = _maxMoveY; }
 
   void setEnable3D(bool flag) { _enable3D = flag; }
+  void setMatrix(const Matrix3& matrix) { _matrix = matrix; }
   void setZDist(long dist) { _zDist = dist; }
 
 private:
