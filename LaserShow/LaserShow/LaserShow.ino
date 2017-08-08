@@ -6,8 +6,7 @@
 #include "Laser.h"
 #include "Drawing.h"
 #include "Cube.h"
-#include "Objects.h"
-#include "Logo.h"
+
 
 // Create laser instance (with laser pointer connected to digital pin 5)
 Laser laser(5);
