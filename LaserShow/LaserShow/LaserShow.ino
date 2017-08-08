@@ -4,33 +4,36 @@
 // Copyright 2016 Florian Link (at) gmx.de
 
 #include "Laser.h"
-
+#include "Drawing.h"
+#include "Cube.h"
+#include "Objects.h"
+#include "Logo.h"
 
 // Create laser instance (with laser pointer connected to digital pin 5)
-Laser miLaser(5);
+Laser laser(5);
 
 void setup()
 {
-  miLaser.init();
+  laser.init();
 }
 
 // draw a circle using sin/cos
 void circle() {
   const int scale = 12;
-  miLaser.sendto(SIN(0)/scale, COS(0)/scale);
-  miLaser.on();
+  laser.sendto(SIN(0)/scale, COS(0)/scale);
+  laser.on();
   for (int r = 5;r<=360;r+=5)
   {
-    miLaser.sendto(SIN(r)/scale, COS(r)/scale);
+    laser.sendto(SIN(r)/scale, COS(r)/scale);
   }
-  miLaser.off();
+  laser.off();
 }
 
 
 
 void loop() {
 
-  circle(); 
+  rotateCube(400);
 
 
 //  drawObjects();
