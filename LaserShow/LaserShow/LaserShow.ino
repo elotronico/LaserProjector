@@ -4,8 +4,7 @@
 // Copyright 2016 Florian Link (at) gmx.de
 
 #include "Laser.h"
-#include "Drawing.h"
-#include "Cube.h"
+
 
 
 // Create laser instance (with laser pointer connected to digital pin 5)
@@ -32,7 +31,7 @@ void circle() {
 
 void loop() {
 
-  rotateCube(400);
+  circle();
 
 
 //  drawObjects();
