@@ -1,15 +1,16 @@
 #include <Arduino.h>
+#include "Laser.h"
 
 // See LICENSE file for details
 // Copyright 2016 Florian Link (at) gmx.de
-
-#include "Laser.h"
-
 
 
 // Create laser instance (with laser pointer connected to digital pin 5)
 Laser laser(5);
 
+//-------------------------------------------------
+//                setup
+//-------------------------------------------------
 void setup()
 {
   laser.init();
@@ -28,12 +29,11 @@ void circle() {
 }
 
 
-
+//-------------------------------------------------
+//                loop
+//-------------------------------------------------
 void loop() {
 
   circle();
 
-
-//  drawObjects();
-//  jumpingText();
 }
